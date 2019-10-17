@@ -1,11 +1,11 @@
-#define WLAN_SSID       "...your SSID..."
-#define WLAN_PASS      "...your password..."
+#define WLAN_SSID       "Ergon SRL - Wireless WiFi"
+#define WLAN_PASS      "aabbccaabbccaabbccaabbccdd"
 
-#define AIO_SERVER      "ip"
+#define AIO_SERVER      "192.168.121.39"
 #define AIO_SERVERPORT  1883                   // use 8883 for SSL
-#define AIO_USERNAME    "...your AIO username (see https://accounts.adafruit.com)..."
-#define AIO_KEY         "...your AIO key..."
-#define CLIENT_DESC     ""
+#define AIO_USERNAME    "asd"
+#define AIO_KEY         "123Stella"
+#define CLIENT_DESC     "Test"
 
 
 #define ONE_WIRE_BUS D4

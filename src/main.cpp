@@ -36,7 +36,7 @@ IPAddress device_ip;
 // #define AIO_SERVERPORT  1883                   // use 8883 for SSL
 // #define AIO_USERNAME    "...your AIO username (see https://accounts.adafruit.com)..."
 // #define AIO_KEY         "...your AIO key..."
- #define CLIENT_ID       ""
+ #define CLIENT_ID       "c4467c02-5283-4b9a-86e3-6a1d364f4633"
 // #define CLIENT_DESC     ""
 
 /************ Global State (you don't need to change this!) ******************/
@@ -47,7 +47,7 @@ WiFiClient client;
 //WiFiClientSecure client;
 
 // Setup the MQTT client class by passing in the WiFi client and MQTT server and login details.
-Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
+Adafruit_MQTT_Client mqtt(&client, AIO_SERVER, AIO_SERVERPORT, CLIENT_ID , AIO_USERNAME, AIO_KEY);
 
 /****************************** Feeds ***************************************/
 
