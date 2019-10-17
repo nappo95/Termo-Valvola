@@ -18,25 +18,26 @@
 #include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
-#include <DallasTemperature.h>
-#include <OneWire.h>
+#include "DallasTemperature.h"
+#include "OneWire.h"
+#include "conf.h"
 
 /************************* WiFi Access Point *********************************/
 
-#define WLAN_SSID       "...your SSID..."
-#define WLAN_PASS       "...your password..."
+//#define WLAN_SSID       "...your SSID..."
+//#define WLAN_PASS       "...your password..."
 
 
 IPAddress device_ip;
 
 /*************************   MQTT  Setup    *********************************/
 
-#define AIO_SERVER      "ip"
-#define AIO_SERVERPORT  1883                   // use 8883 for SSL
-#define AIO_USERNAME    "...your AIO username (see https://accounts.adafruit.com)..."
-#define AIO_KEY         "...your AIO key..."
-#define CLIENT_ID       ""
-#define CLIENT_DESC     ""
+// #define AIO_SERVER      "ip"
+// #define AIO_SERVERPORT  1883                   // use 8883 for SSL
+// #define AIO_USERNAME    "...your AIO username (see https://accounts.adafruit.com)..."
+// #define AIO_KEY         "...your AIO key..."
+ #define CLIENT_ID       ""
+// #define CLIENT_DESC     ""
 
 /************ Global State (you don't need to change this!) ******************/
 
@@ -64,13 +65,13 @@ Adafruit_MQTT_Subscribe get_info = Adafruit_MQTT_Subscribe(&mqtt, CLIENT_DESC "/
 
 /**************************** Termometer *************************************/
 
-#define ONE_WIRE_BUS D4
+// #define ONE_WIRE_BUS D4
 
-#define VALVE_PIN   0
+// #define VALVE_PIN   0
 
-#define LED_PIN  0
+// #define LED_PIN  0
 
-#define VALVE_NORMAL_STATE "off"
+// #define VALVE_NORMAL_STATE "off"
 
 OneWire oneWire(ONE_WIRE_BUS);
  
@@ -239,7 +240,10 @@ void SwitchValveState()
       digitalWrite(VALVE_PIN, LOW);
       digitalWrite(LED_PIN, HIGH); 
     }
-  }
-  
-  
+  }  
 }
+
+void PublishInfo()
+{
+}
+  
